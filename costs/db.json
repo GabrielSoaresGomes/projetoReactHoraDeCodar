@@ -16,6 +16,18 @@
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "teste": "1",
+      "name": "1",
+      "budget": "3",
+      "category": {
+        "id": "6",
+        "name": ""
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [

@@ -1,8 +1,7 @@
-
 import { useNavigate } from "react-router-dom"
 
+import LinkButton from "../layout/LinkButton"
 import styles from './NewProject.module.css'
-
 import ProjectForm from "../project/ProjectForm.js"
 
 function NewProject() {
@@ -26,7 +25,7 @@ function NewProject() {
             .then((data) => {
                 console.log(data)
                 // redirect
-                history('/projects', {message: "Projeto criao com sucesso!"})
+                history('/projects', {message: "Projeto criado com sucesso!"})
             })
             .catch(err => console.log(err))
 
@@ -37,6 +36,7 @@ function NewProject() {
             <h1>Criar Projeto</h1>
             <p>Crie seu projeto para depois adicionar os serviços!</p>
             <ProjectForm handleSubmit={createPost} btnText="Criar Projeto" />
+            <LinkButton to={"/newcategory"} text={"Adicionar Categoria"}/>
         </div>
     )
 }
