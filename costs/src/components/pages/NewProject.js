@@ -1,5 +1,7 @@
 import { Navigate, useNavigate } from "react-router-dom"
+import { useLocation } from 'react-router-dom'
 
+import Message from '../layout/Message'
 import LinkButton from "../layout/LinkButton"
 import styles from './NewProject.module.css'
 import ProjectForm from "../project/ProjectForm.js"
@@ -7,6 +9,12 @@ import ProjectForm from "../project/ProjectForm.js"
 function NewProject() {
 
     const navigate = useNavigate()
+
+    const location = useLocation()
+    let message = ""
+    if (location.state) {
+        message = location.state.message
+    }
 
     function createPost(project) {
 
@@ -33,6 +41,7 @@ function NewProject() {
 
     return (
         <div className={styles.newproject_container}>
+            {message && <Message msg={message} type="success" /> }
             <h1>Criar Projeto</h1>
             <p>Crie seu projeto para depois adicionar os serviços!</p>
             <ProjectForm handleSubmit={createPost} btnText="Criar Projeto" />

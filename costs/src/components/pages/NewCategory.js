@@ -6,7 +6,7 @@ import CategoryForm from "../project/CategoryForm"
 
 function NewCategory() {
 
-    const history = useNavigate()
+    const navigate = useNavigate()
     
     function createCategory(category) {
         //category.name = "default"
@@ -22,7 +22,7 @@ function NewCategory() {
             .then((data) => {
                 console.log(data)
                 // redirect
-                history('/newproject', {message: "Categoria adicionada com sucesso!"})
+                navigate('/newproject', {state: {message: "Categoria adicionada com sucesso!"}})
             })
             .catch(err => console.log(err))
 
