@@ -28,6 +28,17 @@
       "cost": 0,
       "services": [],
       "id": 4
+    },
+    {
+      "name": "Meu Projeto 3",
+      "budget": "15000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
     }
   ],
   "categories": [
